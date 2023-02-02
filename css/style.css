@@ -1,0 +1,404 @@
+:root {
+  --color-orange: hsl(31, 99%, 47%);
+  --color-black: hsl(0, 0%, 8%);
+  --color-green: hsl(101, 56%, 44%);
+  --color-purple: hsl(261, 49%, 56%);
+  --color-blue: hsl(198, 86%, 45%);
+  --color-white: #fff;
+}
+
+body {
+  background: white;
+  color: var(--color-black);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+form {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+button svg {
+  fill: #fff;
+}
+
+label {
+  width: 100%;
+  display: block;
+}
+
+input[type="url"] {
+  font-size: 3rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
+.small {
+  margin-top: 10rem;
+}
+
+a {
+  color: var(--color-black);
+  transition: text-decoration-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-black);
+  text-decoration-color: var(--color-purple);
+}
+
+.button {
+  display: inline-block;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+  padding: 1rem 2rem;
+  background: var(--color-purple);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.button:hover,
+.button:focus {
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: hsl(261, 49%, 46%);
+}
+
+.secondary-button {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+strong {
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0rem;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.layout-container {
+  width: 50rem;
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  display: block;
+}
+
+.site-header {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+.site-header .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tagline {
+  font-size: 1.5rem;
+}
+
+.courses {
+  padding: 0;
+  margin-top: 4rem;
+}
+
+.courses > li {
+  margin-bottom: 4rem;
+}
+
+.course-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-black);
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.course-card:hover,
+.course-card:focus {
+  color: var(--color-black);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.course-card header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card h3 {
+  margin: 0;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-indicator {
+  height: 1rem;
+  width: 4rem;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.progress-indicator:after {
+  height: 100%;
+  width: 3rem;
+  position: absolute;
+  content: '';
+  border-radius: 1rem;
+  background: var(--color-purple);
+}
+
+.course-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Detailpage */
+.breadcrumb {
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.course-aspects {
+  padding: 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  display: flex;
+  gap: 3rem;
+}
+
+.course-aspects li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 15rem;
+  flex-shrink: 0;
+}
+
+.course-aspects .icon {
+  width: 3rem;
+  height: 3rem;
+  background:hsl(0, 0%, 90%);
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.course-aspects .icon svg {
+  width: 2rem;
+}
+
+#more-information {
+  margin-top: 3rem;
+}
+
+.more-info {
+  border-top: 1px solid #666;
+  padding: 3rem 0;
+}
+
+.more-info h3 {
+  margin-top: 0;
+}
+
+.legend {
+  padding: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend .indicator {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+}
+
+.legend .indicator--video {
+  background-color: var(--color-green);
+}
+.legend .indicator--slides {
+  background-color: var(--color-orange);
+}
+.legend .indicator--exercises {
+  background-color: var(--color-blue);
+}
+
+.timeline {
+  height: 2rem;
+  width: 100%;
+  position: relative;
+  border-radius: 8rem;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  gap: 1px;
+  margin-top: 1rem;
+}
+
+.timeline li {
+  height: 2rem;
+  flex: 1 1 auto;
+}
+
+.timeline .video {
+  background: var(--color-green);
+  width: 10%;
+}
+
+.timeline .slides {
+  background: var(--color-orange);
+  width: 10%;
+}
+
+.timeline .exercises {
+  background: var(--color-blue);
+  width: 60%;
+}
+
+.pills {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pill {
+  flex: 0 0 auto;
+  padding: 0.3rem 0.6rem;
+  background: hsl(0, 0%, 90%);
+  border-radius: 4rem;
+  margin: 0 0.6rem 0.8rem 0;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.person__image {
+  position: relative;
+  width: 10rem;
+  flex: 1 0 auto;
+}
+
+.person__profile {
+  border-radius: 50%;
+  width: 10rem;
+}
+
+.employment {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.person h4 {
+  margin: 0;
+}
+
+.cta-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-purple);
+  color: #fff;
+  padding: 2rem;
+}
+
+.cta-card img {
+  width: 10rem;
+  transform: translateX(-4rem);
+}
+
+.cta-card a {
+  color: inherit;
+}
